@@ -1,0 +1,10 @@
+{
+    "dependencies": [
+        "langchain_openai",
+        "./graph.py"
+    ],
+    "env": "./.env",
+    "graphs": {
+        "mr_thumbs": "./graph.py:graph"
+    }
+}
