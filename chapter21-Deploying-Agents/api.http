@@ -1,0 +1,31 @@
+POST http://127.0.0.1:8000/conversations
+
+###
+
+POST http://127.0.0.1:8000/conversations/conv_69db4bf3d9b4819098d9eb017f1f122c0a11979db556d034/message
+Content-Type: application/json
+
+{
+    "question": "What is the first question I asked you?"
+}
+
+###
+
+POST http://127.0.0.1:8000/conversations/conv_69db4bf3d9b4819098d9eb017f1f122c0a11979db556d034/message-stream
+Content-Type: application/json
+
+{
+    "question": "What is the size of the great wall of china?"
+}
+
+###
+
+curl -N -X POST http://127.0.0.1:8000/conversations/conv_69db4bf3d9b4819098d9eb017f1f122c0a11979db556d034/message-stream \
+    -H "Content-Type: application/json" \
+    -d '{"question": "What is the size of the great wall of china?"}'
+
+###
+
+curl -N -X POST http://127.0.0.1:8000/conversations/conv_69db4bf3d9b4819098d9eb017f1f122c0a11979db556d034/message-stream-all \
+    -H "Content-Type: application/json" \
+    -d '{"question": "What is the size of the great wall of china?"}'
